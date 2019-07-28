@@ -10,3 +10,7 @@ A fully responsive Single Page Application (SPA) using Vue.js, Bootstrap, Vanill
   * Reneder wiwth Vue.js
   * Google geoLoc API
   * Show Weather feature using DarkSky API
+
+<h4>Previews:</h4>
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
