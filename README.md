@@ -13,10 +13,10 @@ A fully responsive Single Page Application (SPA) using Vue.js, Bootstrap, Vanill
 
 <h4>Previews:</h4>
 
-![Image preview](preview 1.png)
+![Image preview](p1.png)
 
-![Image preview](preview 2.png)
+![Image preview](p2.png)
 
-![Image preview](preview 3.png)
+![Image preview](p3.png)
 
-![Image preview](preview 4.png)
+![Image preview](p4.png)
