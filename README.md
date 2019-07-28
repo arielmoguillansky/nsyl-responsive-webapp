@@ -13,4 +13,10 @@ A fully responsive Single Page Application (SPA) using Vue.js, Bootstrap, Vanill
 
 <h4>Previews:</h4>
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![preview 1](preview 1.png)
+
+![preview 2](preview 2.png)
+
+![preview 3](preview 3.png)
+
+![preview 4](preview 4.png)
