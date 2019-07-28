@@ -1,0 +1,25 @@
+{
+  "short_name": "NYSL",
+  "name": "Northside Youth Soccer League",
+  "background_color": "#07353d",
+  "theme_color": "#17a2b8",
+  "icons": [{
+    "src": "images/app_icons/Assets.xcassets/AppIcon.appiconset/128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "images/app_icons/Assets.xcassets/AppIcon.appiconset/152.png",
+    "type": "image/png",
+    "sizes": "152x152"
+  }, {
+    "src": "images/app_icons/Assets.xcassets/AppIcon.appiconset/144.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }, {
+    "src": "images/app_icons/Assets.xcassets/AppIcon.appiconset/192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "display": "standalone"
+  
+}

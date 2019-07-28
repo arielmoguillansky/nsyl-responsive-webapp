@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images\app_icons\Assets.xcassets\AppIcon.appiconset\76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images\app_icons\Assets.xcassets\AppIcon.appiconset\120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images\app_icons\Assets.xcassets\AppIcon.appiconset\152.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="128x128" href="images\app_icons\Assets.xcassets\AppIcon.appiconset\128.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images\app_icons\Assets.xcassets\AppIcon.appiconset\196.png">
+  <link rel="shortcut icon" sizes="128x128" href="images\app_icons\Assets.xcassets\AppIcon.appiconset\128.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="manifest" href="script/manifest.json">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+	<title>NYLS Web App</title>
+</head>
+<body>
+  <div id="app">
+	<nav class="navbar navbar-expand-lg nav-color sticky-top" id="customnav" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon custom-toggler" id="toggler"></span>
+ 		</button>
+   
+   		       
+
+            <div class="col">
+                <img src="images/nysl_logo.png" alt="nysl logo" id="logo">
+                
+                <h1 id="title">NYSL</h1>
+            
+            </div>
+    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    		<ul class="navbar-nav" id="menu" 	>
+    			<li><a class="nav-link" href="#home">HOME</a></li>
+    			<li><a class="nav-link" href="#schedule" >SCHEDULE</a></li>
+    			<li><a class="nav-link" href="#standings" >STANDING</a></li>
+    			<li><a class="nav-link" href="#locations" >LOCATIONS</a></li>
+    			<li><a class="nav-link" href="#gallery" >GALLERY</a></li>
+          <li><a class="nav-link" href="#contact">POSTS</a></li>
+    		</ul>
+    	</div>
+     
+      
+  </nav>
+  <main>
+    	<div class="container-fluid" id="pages">
+        <section id="home" class="current">
+  	    	
+  	    		<div class="row">
+  	    			<h2 id="events_heading">UPCOMING EVENTS</h2>
+  	    			<div class="w-100"></div>
+  	    			<div class="col labels accordion_style location text-center">
+                <div class="event-container" id="event1_ph">
+                  <p class="event_text">August 4 <br> 
+                  NYSL Fundraiser</p>
+                  <div class="overlay"></div>
+                </div>
+              </div>
+  					  <div class="w-100"></div>
+  	    			<div class="col labels accordion_style location text-center">
+                <div class="event-container" id="event2_ph">
+                  <p class="event_text">August 16 <br>Season Kick-off: Meet the Teams
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="w-100"></div>
+  	    			<div class="col labels accordion_style location text-center">
+                <div class="event-container" id="event3_ph">
+                  <p class="event_text">September 1 <br> First Game of the Season <br>
+                    (Check game schedule for details)
+                  <div class="overlay"></div>
+                </div>
+              </div>
+  	    		
+            </div>
+  	    		<div class="row">
+  	    			<h2>BREAKING NEWS</h2>
+  	    			<div class="w-100"></div>
+  	    			<div class="col labels accordion_style location text-center">
+                <div class="event-container" id="alert_ph">
+                  <p class="event_text">Today's U2 vs. U4 match is postpone due to weather conditions</p>
+                   <div class="overlay_alert"></div>
+                </div>
+              </div>
+  				  </div>
+  	    </section>
+      	<section id="schedule" >
+      		
+  	    		<div class="row">
+  	    			<h2 id="scehdule_heading">2019 SCHEDULE</h2>
+  	    			<div class="w-100"></div>
+              <div class="col date">
+                <h5><span>Sat 9/01</span></h5>
+              </div>
+  	    			<div id="schedule_accor">
+              <div class="container-fluid accordion_style" >
+    						<div class="row align-items-center justify-content-center" id="headingOne">
+     						 <div class="col location text-center">
+  	    					<span class="match_schedule">U1</span>
+  	    				 </div>
+  	    				 <div class="col location timebox">
+                  <i class="far fa-clock"></i>
+                  <span class="time">{{match_time.first}}</span> 
+                 </div>
+  	    				 <div class="col location text-center">
+  	    					<span class="match_schedule">U4</span>
+  	    				 </div>
+        					
+  	        		 <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+  	        				>
+  	          				<i class="fas fa-chevron-down"></i>
+  	        		 </button>
+        				</div>
+        				
+      					<div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#schedule_accor">
+        					<div class="container">
+        					<div class="row justify-content-center loc">
+        						<div class="col-2 location"><img class="stadium_icon" src="images/stadium_icon.png" alt="stadium icon"></div>
+        						<div class="col-7 location"><span class="loc_field">AJ Katzenmaier</span></div>
+         						<div class="col location"><a onclick="goToLoc();"><i class="fas fa-location-arrow"></i></a></div>
+         					</div>
+         				
+         				
+         					<div class="row justify-content-center" id="weather">
+         						<div class="weather_img" id="cloudy"> </div>
+         						<div class="location temp"><span>
+         							{{weather.temperature}}
+         						</span></div>
+         					</div>
+                  <div class="row justify-content-center">
+                    <button onclick="enterPost(event);" class="btn btn-info" id="U1vsU4">Comment this match!</button>
+                  </div>
+         				 </div>
+      					</div>
+      				</div>
+              
+              <div class="container-fluid accordion_style" >
+                <div class="row align-items-center justify-content-center" id="headingTwo">
+                 <div class="col location text-center">
+                  <span class="match_schedule">U3</span>
+                 </div>
+                 <div class="col location timebox">
+                  <i class="far fa-clock"></i>
+                  <span class="time">{{match_time.second}}</span> 
+                 </div>
+                 <div class="col location text-center">
+                  <span class="match_schedule">U2</span>
+                 </div>
+                  
+                 <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
+                    >
+                      <i class="fas fa-chevron-down"></i>
+                 </button>
+                </div>
+                
+                <div id="collapseTwo" class="collapse hide" aria-labelledby="headingTwo" data-parent="#schedule_accor">
+                  <div class="container">
+                  <div class="row justify-content-center loc">
+                    <div class="col-2 location"><img class="stadium_icon" src="images/stadium_icon.png" alt="stadium icon"></div>
+                    <div class="col-7 location"><span class="loc_field">Greenbay</span></div>
+                    <div class="col location"><a href="#green_loc"><i class="fas fa-location-arrow"></i></a></div>
+                  </div>
+                
+                
+                  <div class="row justify-content-center" id="weather">
+                    <div class="weather_img" id="cloudy"> </div>
+                    <div class="location temp"><span>
+                      {{weather.temperature}}
+                    </span></div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <button onclick="enterPost(event);" class="btn btn-info" id="U3vsU2">Comment this match!</button>
+                  </div>
+                 </div>
+                </div>
+              </div>
+             <div class="col date date-mid">
+                <h5><span>Sat 9/08</span></h5>
+              </div>
+              <div class="container-fluid accordion_style" >
+                <div class="row align-items-center justify-content-center" id="headingThree">
+                 <div class="col location text-center">
+                  <span class="match_schedule">U5</span>
+                 </div>
+                 <div class="col location timebox">
+                  <i class="far fa-clock"></i>
+                  <span class="time">{{match_time.first}}</span> 
+                 </div>
+                 <div class="col location text-center">
+                  <span class="match_schedule">U6</span>
+                 </div>
+                  
+                 <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"
+                    >
+                      <i class="fas fa-chevron-down"></i>
+                 </button>
+                </div>
+                
+                <div id="collapseThree" class="collapse hide" aria-labelledby="headingThree" data-parent="#schedule_accor">
+                  <div class="container">
+                  <div class="row justify-content-center loc">
+                    <div class="col-2 location"><img class="stadium_icon" src="images/stadium_icon.png" alt="stadium icon"></div>
+                    <div class="col-7 location"><span class="loc_field">Howard A. Yeager</span></div>
+                    <div class="col location"><a href="#green_loc"><i class="fas fa-location-arrow"></i></a></div>
+                  </div>
+                
+                
+                  <div class="row justify-content-center" id="weather">
+                    <div class="weather_img" id="cloudy"> </div>
+                    <div class="location temp"><span>
+                      {{weather.temperature}}
+                    </span></div>
+                    <div class="row justify-content-center">
+                    <button onclick="enterPost(event);" class="btn btn-info" id="U5vsU6">Comment this match!</button>
+                  </div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+
+              <div class="container-fluid accordion_style" >
+                <div class="row align-items-center justify-content-center" id="headingFour">
+                 <div class="col location text-center">
+                  <span class="match_schedule">U6</span>
+                 </div>
+                 <div class="col location timebox">
+                  <i class="far fa-clock"></i>
+                  <span class="time">{{match_time.second}}</span> 
+                 </div>
+                 <div class="col location text-center">
+                  <span class="match_schedule">U1</span>
+                 </div>
+                  
+                 <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"
+                    >
+                      <i class="fas fa-chevron-down"></i>
+                 </button>
+                </div>
+                
+                <div id="collapseFour" class="collapse hide" aria-labelledby="headingFour" data-parent="#schedule_accor">
+                  <div class="container">
+                  <div class="row justify-content-center loc">
+                    <div class="col-2 location"><img class="stadium_icon" src="images/stadium_icon.png" alt="stadium icon"></div>
+                    <div class="col-7 location"><span class="loc_field">Marjorie P. Hart</span></div>
+                    <div class="col location"><a href="#green_loc"><i class="fas fa-location-arrow"></i></a></div>
+                  </div>
+                
+                
+                  <div class="row justify-content-center" id="weather">
+                    <div class="weather_img" id="cloudy"> </div>
+                    <div class="location temp"><span>
+                      {{weather.temperature}}
+                    </span></div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+
+              <div class="col date date-mid">
+                <h5><span>Sat 9/08</span></h5>
+              </div>
+              <div class="container-fluid accordion_style" >
+                <div class="row align-items-center justify-content-center" id="headingFive">
+                 <div class="col location text-center">
+                  <span class="match_schedule">U2</span>
+                 </div>
+                <div class="col location timebox">
+                  <i class="far fa-clock"></i>
+                  <span class="time">{{match_time.first}}</span> 
+                 </div>
+                 <div class="col location text-center">
+                  <span class="match_schedule">U4</span>
+                 </div>
+                  
+                 <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"
+                    >
+                      <i class="fas fa-chevron-down"></i>
+                 </button>
+                </div>
+                
+                <div id="collapseFive" class="collapse hide" aria-labelledby="headingFive" data-parent="#schedule_accor">
+                  <div class="container">
+                  <div class="row justify-content-center loc">
+                    <div class="col-2 location"><img class="stadium_icon" src="images/stadium_icon.png" alt="stadium icon"></div>
+                    <div class="col-7 location"><span class="loc_field">North Elementary</span></div>
+                    <div class="col location"><a href="#green_loc"><i class="fas fa-location-arrow"></i></a></div>
+                  </div>
+                
+                
+                  <div class="row justify-content-center" id="weather">
+                    <div class="weather_img" id="cloudy"> </div>
+                    <div class="location temp"><span>
+                      {{weather.temperature}}
+                    </span></div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+              
+              <div class="container-fluid accordion_style" >
+                <div class="row align-items-center justify-content-center" id="headingSix">
+                 <div class="col location text-center">
+                  <span class="match_schedule">U3</span>
+                 </div>
+                 <div class="col location timebox">
+                  <i class="far fa-clock"></i>
+                  <span class="time">{{match_time.second}}</span> 
+                 </div>
+                 <div class="col location text-center">
+                  <span class="match_schedule">U5</span>
+                 </div>
+                  
+                 <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"
+                    >
+                      <i class="fas fa-chevron-down"></i>
+                 </button>
+                </div>
+                
+                <div id="collapseSix" class="collapse hide" aria-labelledby="headingSix" data-parent="#schedule_accor">
+                  <div class="container">
+                  <div class="row justify-content-center loc">
+                    <div class="col-2 location"><img class="stadium_icon" src="images/stadium_icon.png" alt="stadium icon"></div>
+                    <div class="col-7 location"><span class="loc_field">AJ Katzenmaier</span></div>
+                    <div class="col location"><a href="#green_loc"><i class="fas fa-location-arrow"></i></a></div>
+                  </div>
+                
+                
+                  <div class="row justify-content-center" id="weather">
+                    <div class="weather_img" id="cloudy"> </div>
+                    <div class="location temp"><span>
+                      {{weather.temperature}}
+                    </span></div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+              
+              </div>
+  	    		</div>
+        </section>
+        <section id="standings">
+          
+            <div class="row">
+              <h2 id="stand_heading">2019 STANDINGS</h2>
+              <div class="w-100"></div>
+              <div class="col tab">
+                <table class="table table-striped" id="stand_table">
+                  <thead>
+                    <tr>
+                      <td>Pos.</td>
+                      <td>Team</td>
+                      <td>Points</td>
+                      <td>W</td>
+                      <td>D</td>
+                      <td>L</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="teams in stats">
+                      <td class="td_bold">{{teams.pos}}</td>
+                      <td class="td_bold">{{teams.team}}</td>
+                      <td>{{teams.points}}</td>
+                      <td>{{teams.w}}</td>
+                      <td>{{teams.d}}</td>
+                      <td>{{teams.l}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <h2>TOP SCORER</h2>
+            </div>
+            <div class="row top_player">
+              <div class="col">
+                <h5>Ethan Schwensteiger</h5>
+              </div>
+              <div class="w-100"></div>
+              <div class="col-4">
+                <div  id="top_scorer_ph"></div>
+              </div>
+              <div class="col top_player_text">
+                <p>With only 12 years old, Ethan has his left foot on fire. A lethal striker, his efficiency proves his value as team's captain: he can score on 8 times out of 10. Unarguably, the actual top striker of the league with 11 scored goals.</p>
+              </div>
+            </div>
+            <div class="row">
+              <h2>TOP GOALKEEPER</h2>
+            </div>
+            <div class="row top_player">
+              <div class="col">
+                <h5>Ryan Carlslile</h5>
+              </div>
+              <div class="w-100"></div>
+              <div class="col-4">
+                <div  id="top_goalkeep_ph"></div>
+              </div>
+              <div class="col top_player_text">
+                <p>Ryan's ability to pull off breathtaking saves is among the best in the Youth League. Reliable, a fine shot-stopper and comfortable in possession. Ryan holds the record of the less beaten fence, recieving only 5 goals in 7 matches, an outstanding 71% of efficacy.</p>
+              </div>
+            </div>
+        </section>
+        <section id="locations">
+          
+            <div class="row">
+              <h2 id="loc_heading">FIELDS LOCATIONS</h2>
+              <div class="w-100"></div>
+              
+              <div id="location_accor">
+                <div class="container-fluid accordion_style">
+                  <div class="row align-items-center justify-content-center accor_loc" id="locOne">
+                    <div class="col-1 loc_subs">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="col-8 loc_subs loc_name " id="katz_loc">
+                      <div><span>AJ Katzenmaier Elementary</span></div>
+                      <div>24 W. Walton St</div>
+                      <div>Chicago, IL 60610</div>
+                    </div>
+                  
+                    <button class="btn btn-link loc_subs loc_name accordion_arrow" data-toggle="collapse" data-target="#loc_collapse_1" aria-expanded="true" aria-controls="loc_collapse_1">
+                      <i class="fas fa-chevron-down"></i>
+                     </button>
+                  </div>
+                
+                  <div id="loc_collapse_1" class="collapse hide " aria-labelledby="locOne" data-parent="#location_accor">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col">
+                        <iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654246110985!2d-87.63123908512215!3d41.90029237922046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1552488888549"></iframe>
+                      </div>
+                      <div class="w-100"></div>
+                        <div class="col">
+                          <a href="https://www.google.com/maps/dir/?api=1&destination=41.900428, -87.628962">
+                          <button class="btn map-btn btn-success">HELP ME GET THERE</button>
+                          </a>
+                        </div>
+                      </div>
+                  </div>
+                
+                  
+                 </div>
+                </div>
+                
+                <div class="container-fluid accordion_style">
+                  <div class="row align-items-center justify-content-center accor_loc" id="locTwo">
+                  <div class="col-1 loc_subs">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="col-8 loc_subs loc_name " id="green_loc">
+                  <div><span>Greenbay Elementary</span></div>
+                  <div>1734 N. Orleans St.</div>
+                  <div>Chicago, IL 60614</div>
+                  </div>
+                  
+                  <button class="btn btn-link loc_subs loc_name accordion_arrow" data-toggle="collapse" data-target="#loc_collapse_2" aria-expanded="true" aria-controls="loc_collapse_2">
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  </div>
+                
+                  <div id="loc_collapse_2" class="collapse hide " aria-labelledby="locTwo" data-parent="#location_accor">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col">
+                        <iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9986.557837665398!2d-87.6391534033214!3d41.913898493502785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1555805480056!5m2!1ses!2sar"></iframe>
+                      </div>
+                      <div class="w-100"></div>
+                        <div class="col">
+                          <a href="https://www.google.com/maps/dir/?api=1&destination=41.914040, -87.637286">
+                          <button type="submit" class="btn map-btn btn-success">HELP ME GET THERE</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                
+                  
+                 </div>
+                </div>
+                
+                <div class="container-fluid accordion_style">
+                  <div class="row align-items-center justify-content-center accor_loc" id="locThree">
+                  <div class="col-1 loc_subs">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="col-8 loc_subs loc_name ">
+                  <div><span>Howard A Yeager</span></div>
+                  <div>2245 N. Southport Ave.</div>
+                  <div>Chicago, IL 60614</div>
+                  </div>
+                  
+                  <button class="btn btn-link loc_subs loc_name accordion_arrow" data-toggle="collapse" data-target="#loc_collapse_3" aria-expanded="true" aria-controls="loc_collapse_3">
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  </div>
+                
+                  <div id="loc_collapse_3" class="collapse hide " aria-labelledby="locThree" data-parent="#location_accor">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col">
+                        <iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5936.571970469501!2d-87.6465953766666!3d41.92970570700112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1555806262734!5m2!1ses!2sar"></iframe>
+                      </div>
+                      <div class="w-100"></div>
+                        <div class="col">
+                          <a href="https://www.google.com/maps/dir/?api=1&destination=41.923453, -87.661999">
+                          <button type="submit" class="btn map-btn btn-success">HELP ME GET THERE</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="container-fluid accordion_style">
+                  <div class="row align-items-center justify-content-center accor_loc" id="locFour">
+                  <div class="col-1 loc_subs">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="col-8 loc_subs loc_name ">
+                  <div><span>Majorie Elementary</span></div>
+                  <div>2625 N. Orchard St.</div>
+                  <div>Chicago, IL 60614</div>
+                  </div>
+                  
+                  <button class="btn btn-link loc_subs loc_name accordion_arrow" data-toggle="collapse" data-target="#loc_collapse_4" aria-expanded="true" aria-controls="loc_collapse_4">
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  </div>
+                
+                  <div id="loc_collapse_4" class="collapse hide " aria-labelledby="locFour" data-parent="#location_accor">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col">
+                        <iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8395.609709942375!2d-87.6462185236686!3d41.92948448499724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1555806515307!5m2!1ses!2sar"></iframe>
+                      </div>
+                      <div class="w-100"></div>
+                        <div class="col">
+                          <a href="https://www.google.com/maps/dir/?api=1&destination=41.929782, -87.645383">
+                          <button type="submit" class="btn map-btn btn-success">HELP ME GET THERE</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="container-fluid accordion_style">
+                  <div class="row align-items-center justify-content-center accor_loc" id="locFive">
+                  <div class="col-1 loc_subs">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="col-8 loc_subs loc_name ">
+                  <div><span>North Elementary</span></div>
+                  <div>1409 N. Ogden Ave.</div>
+                  <div>Chicago, IL 60610</div>
+                  </div>
+                  
+                  <button class="btn btn-link loc_subs loc_name accordion_arrow" data-toggle="collapse" data-target="#loc_collapse_5" aria-expanded="true" aria-controls="loc_collapse_5">
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  </div>
+                
+                  <div id="loc_collapse_5" class="collapse hide " aria-labelledby="locFive" data-parent="#location_accor">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col">
+                        <iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11877.351102508312!2d-87.646188!3d41.907097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1555806778446!5m2!1ses!2sar"></iframe>
+                      </div>
+                      <div class="w-100"></div>
+                        <div class="col">
+                          <a href="https://www.google.com/maps/dir/?api=1&destination=41.907184, -87.645995">
+                          <button type="submit" class="btn map-btn btn-success">HELP ME GET THERE</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="container-fluid accordion_style">
+                  <div class="row align-items-center justify-content-center accor_loc" id="locSix">
+                  <div class="col-1 loc_subs">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="col-8 loc_subs loc_name ">
+                  <div><span>South Elementary</span></div>
+                  <div>2101 N. Fremont St.</div>
+                  <div>Chicago, IL 60614</div>
+                  </div>
+                  
+                  <button class="btn btn-link loc_subs loc_name accordion_arrow" data-toggle="collapse" data-target="#loc_collapse_6" aria-expanded="true" aria-controls="loc_collapse_6">
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  </div>
+                
+                  <div id="loc_collapse_6" class="collapse hide " aria-labelledby="locSix" data-parent="#location_accor">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col">
+                        <iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11874.991761014922!2d-87.651367!3d41.919777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1555806871021!5m2!1ses!2sar"></iframe>
+                      </div>
+                      <div class="w-100"></div>
+                        <div class="col">
+                          <a href="https://www.google.com/maps/dir/?api=1&destination=41.919849, -87.651190">
+                          <button type="submit" class="btn map-btn btn-success">HELP ME GET THERE</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div> 
+        </section>
+        <section id="gallery" >
+          
+            <div class="row">
+              <h2 id="gallery_heading">PHOTO GALERY</h2>
+              <div class="w-100"></div>
+              <div id="gallery_accor">
+              <div class="container-fluid accordion_style" >
+                <div class="row align-items-center justify-content-center gallery_heads" id="gallery_heading_1">
+                  <div class="col-4 gal_subs loc_name">
+                    <span>8/24</span>
+                  </div>
+                  <div class="col gal_subs loc_name">
+                    <span>U1 vs. U5</span> 
+                  </div>
+                  <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#gallery_collapse_1" aria-expanded="false" aria-controls="gallery_collapse_1">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+
+                <div id="gallery_collapse_1" class="collapse hide gal_collapse" aria-labelledby="gallery_heading_1" data-parent="#gallery_accor">
+                 <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid">
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+
+                  <figure class="col-md-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
+                      <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid" />
+                    </a>
+                  </figure>
+                </div>
+              </div>
+
+              <div class="container-fluid accordion_style">
+                <div class="row align-items-center justify-content-center gallery_heads" id="gallery_heading_2">
+                    <div class="col-4 gal_subs loc_name">
+                      <span>8/24</span>
+                    </div>
+                    <div class="col gal_subs loc_name">
+                      <span>U3 vs. U6</span> 
+                    </div>
+                    <button class="btn btn-link accordion_arrow" data-toggle="collapse" data-target="#gallery_collapse_2" aria-expanded="false" aria-controls="gallery_collapse_2">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div id="gallery_collapse_2" class="collapse hide gal_collapse" aria-labelledby="gallery_heading_2" data-parent="#gallery_accor">
+                   <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid">
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+
+                    <figure class="col-md-4">
+                      <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid" />
+                      </a>
+                    </figure>
+                </div>
+              </div>
+            </div>
+            </div>
+        </section>
+        <section id="contact">
+          <div>
+          <!-- Splash screen -->
+          <section id="page-splash">
+
+            <h3 class="logo">QUICK CHAT</h3>
+            <div>
+              <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign in with Google</button>
+            </div>
+            <div>
+              <p>..or enter an email and password below to sign in.</p>
+
+              <input class="textfield-input" style="display:inline;width:auto;" type="text" id="inEmail" name="email" placeholder="Email"/>
+              
+              <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+              
+              <button onclick="enterPost(event);" class="mdl-button mdl-js-button mdl-button--raised" id="sign-in-generic" name="signin">Sign In</button>
+              <button onclick="enterPost(event);" class="mdl-button mdl-js-button mdl-button--raised" id="sign-up-generic" name="signin">Sign Up</button>
+            </div>
+          </section>
+          <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <!-- Header section containing logo and menu -->
+          <header class="header mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+
+            <div class="mdl-layout__header-row titlebar">
+              <h3 class="logo" id="post-title-match">Match's instant messages</h3>
+              <button id="sign-out-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign out</button>
+            </div>
+
+            <!-- Navigation Bar -->
+            <div class="tab mdl-layout__header-row mdl-color--light-blue-600">
+              <div class="mdl-tab">
+                <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">new_releases</i> Recent
+                </div>
+                <div id="menu-my-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">home</i> My posts
+                </div>
+                <div id="menu-my-top-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">trending_up</i> My top posts
+                </div>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect" id="add">
+                <i class="material-icons">mode_edit</i>
+                </button>
+              </div>
+            </div>
+          </header>
+
+          <div class="mdl-layout__content mdl-color--grey-100">
+
+            <!-- Show the add post form -->
+            <section class="mdl-grid content" id="add-post" style="display:none">
+              <div class="mdl-cell mdl-cell--12-col mdl-grid">
+
+                  <!-- Card containing the inputs to add a new messages -->
+                  <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
+                          mdl-cell--6-col-desktop">
+                    <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+                      <h2 class="mdl-card__title-text">New Post</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                      <form id="message-form" action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="new-post-title">
+                          <label class="mdl-textfield__label" for="new-post-title">Post title...</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <textarea class="mdl-textfield__input" rows="3" id="new-post-message"></textarea>
+                          <label class="mdl-textfield__label" for="new-post-message">Post message...</label>
+                        </div>
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                          Add post
+                        </button>
+                      </form>
+                    </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Show a list of recent posts -->
+            <section class="mdl-grid content" id="recent-posts-list" style="display:none">
+              <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+              </div>
+            </section>
+
+            <!-- Show the list of user's posts -->
+            <section class="mdl-grid content" id="user-posts-list" style="display:none">
+              <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+              </div>
+            </section>
+
+            <!-- Show the list of top user's posts -->
+            <section class="mdl-grid content" id="top-user-posts-list" style="display:none">
+              <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+              </div>
+            </section>
+          </div>
+         
+                   
+          </div>
+          </div>          
+        </section>
+      </div>
+  </main>
+  <footer>
+    <div class="container-fluid">
+      <div class="row foot nav-color text-center">
+        <div class="col">
+          <span>NYSL WebApp - Copyright | 2019</span>
+        </div>
+      </div>
+    </div>  
+  </footer>
+  </div>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyB5fNcMOhcUtqKBY7ERDArrC4yS5r8TSxw",
+          authDomain: "nysl-webapp-92.firebaseapp.com",
+          databaseURL: "https://nysl-webapp-92.firebaseio.com",
+          projectId: "nysl-webapp-92",
+          storageBucket: "nysl-webapp-92.appspot.com",
+          messagingSenderId: "858758327906"
+        };
+        firebase.initializeApp(config);
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="script/index.js"></script>
+  <script src="script/blog.js"></script>
+</body>
+</html>
